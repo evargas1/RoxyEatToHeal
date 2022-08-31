@@ -1,0 +1,215 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <!-- ready for depoloyment! -->
+  <head>
+    <title>Roxy | Example Webiste</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- styles icons from font awsome -->
+    <script
+    src="https://kit.fontawesome.com/88ea6b8356.js"
+    crossorigin="anonymous" ></script>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  </head>
+  <body>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+    <!-- this will begin the banner section layer -->
+<section class="menu-section" aria-label="background image of beach side main landing page">
+  <div id="green-land" class="landing-half">
+    <div class="small-nav">
+      <span onclick="addClass()" id="menu-butt">
+        <div></div>
+        <div></div>
+        <div></div>
+      </span>
+      <div id="myNav" class="small-nav-expand overlay-menu">
+        <button onclick="removeClass()" id="close" href="#" class="closebtn" >&times;</button>
+        <div class="overlay-content">
+          <a href="{% url 'index' %}">Home</a>
+          <a href="{% url 'aboutus' %}">About us</a>
+          <a href="{% url 'contact' %}">Contact</a>
+          <a href="{% url 'login' %}">Login</a>
+          <a href="{% url 'signup' %}">Signup</a>
+        </div>
+      </div>
+      
+    </div>
+    <img class="roxy-rose" src="{% static './img/roxy-rose.png' %}" alt="">
+    <div id="logo">
+      <img src="{% static './img/roxy-logo.png' %}" alt="">
+      <h2>Roxy</h2>
+    </div>
+    <div class="main-title">
+      <h1>Let Nature <span class="cursive">Heal</span> Your Body and Soul</h1>
+    </div>
+  </div>
+  <div id="palm-land" class="landing-half">
+    <img src="{% static './img/roxy-palmbranches.jpg' %}" alt="">
+    <div class="large-nav">
+      <ul>
+        <li><a href="{% url 'index' %}">Home</a></li>
+        <li><a href="{% url 'aboutus' %}">About Us</a></li>
+        <li><a href="{% url 'contact' %}">Contact</a></li>
+        <li><a href="{% url 'login' %}">Login</a></li>
+        <li><a href="{% url 'signup' %}">Signup</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+
+    {% block content %}
+
+    {% endblock content %}
+
+
+
+
+
+
+
+
+
+
+<!-- this will be footer section  -->
+<div class="footer-sec-black">
+    <div class="large-conatiner">
+      <div class="row">
+        <div class="col-5">
+          <div class="logo">
+            <i class="fas fa-leaf" style="color: aliceblue;" ></i> Roxy 
+          </div>
+          <p class="copyright" >Copyright 2020 - Estrella Vargas | Teley </p>
+        </div>
+        <div class="col-4-s">
+          <ul>
+            <li><a class="bolded" href="#">Products</a></li>
+            <li><a href="#">Product</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Login</a></li>
+            
+  
+          </ul>
+        </div>
+  
+        <div class="col-4-s">
+          <ul>
+            <li><a class="bolded" href="#">About us</a></li>
+            <li><a href="#">Learn More</a></li>
+            <li><a href="#">Featured</a></li>
+            <li><a href="#">Careers</a></li>
+            
+  
+          </ul>
+        </div>
+  
+        <div class="col-4-s">
+          <ul>
+            <li><a class="bolded" href="#">Resources</a></li>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Book a Demo</a></li>
+            <li><a href="#">Server Status</a></li>
+       
+          </ul>
+        </div>
+  
+        <div class="col-4-s">
+          <ul>
+            <li><a class="bolded" href="#">Get In Touch</a></li>
+            <li><a href="#">Feedback</a></li>
+            <li><a href="#">Thanks for your support</a></li>
+  
+          </ul>
+          <div class="social-section">
+            <ul>
+              <li><a href=""><i class="fab fa-facebook fa-1x" ></i></a></li>
+              <li><a href=""><i class="fab fa-twitter fa-1x"></i></a></li>
+              <li><a href=""><i class="fab fa-instagram fa-1x"></i></a></li>
+            </ul>
+  
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+ <!-- stagePadding: 50 -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"></script>
+<script>
+    function openCity(cityName,elmnt,color) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+      }
+      document.getElementById(cityName).style.display = "block";
+      elmnt.style.backgroundColor = color;
+    
+    }
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+</script>
+  
+  
+      <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+</script>
+
+
+<!-- carsouel javascript -->
+<script type="text/javascript">
+    $('.owl-carousel').owlCarousel({
+        loop:true,
+        margin:10,
+        nav:false,
+        autoplay: false,
+        autoplayTimeout: 1000,
+       
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:3
+            },
+            1000:{
+                items:5
+            }
+        }
+    })
+</script>
+
+
+
+    
+</body>
+</html>
