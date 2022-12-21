@@ -1,4 +1,4 @@
-#Roxy Eat To Heal 
+Roxy Eat To Heal 
 
 A website created for a Chicago based holistic nurtionist. Created with Django, HTML/CSS, and JS. Deployed on digital ocean and uses Apache.
 
